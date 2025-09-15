@@ -70,3 +70,6 @@ python ANN\infer_ann.py --image "path\to\your.jpg" --archive archive --checkpoin
 - For non-RGB inputs (e.g., 1-channel), set `in_channels` in `TrafficANNConfig`.
 - If using `behavior_mode="multiclass"`, use cross-entropy loss and class labels. For `multilabel`, use BCE-with-logits loss and multi-hot labels.
 - For edge deployment, prefer `mobilenet_v3_small`.
+
+### Dataset Link:
+https://www.kaggle.com/datasets/yusufberksardoan/traffic-detection-project
