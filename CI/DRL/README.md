@@ -45,39 +45,49 @@ This project is organized into a modular structure, which is a best practice in 
 
 ---
 
-## ⚙ How to Run
+## ⚙️ How to Run
 
-Follow these steps to get the project up and running on your machine.
+### 1. Install Dependencies
 
-*1. Install Dependencies*
-First, you need to install all the necessary Python libraries. It's recommended to create a requirements.txt file with the content below and then run pip install -r requirements.txt.
+First, install all the required Python libraries.
 
-*Content for requirements.txt:*
+It is recommended to create a `requirements.txt` file with the following content:
 
+```
 pandas
 scikit-learn
 joblib
+```
 
+Then install dependencies with:
 
-Command to install:
-bash
-pip install pandas scikit-learn joblib
+```bash
+pip install -r requirements.txt
+```
 
+---
 
-*2. Train the AI Model*
-This step runs the main training script. It will train the Random Forest model on 80% of your data and save the result.
+### 2. Train the AI Model
 
-In your terminal, run the following command:
-bash
+Run the main training script. This will train a **Random Forest** model on 80% of the dataset and save it.
+
+```bash
 python train.py
+```
 
-After this process is complete, you will see a new file in your folder named traffic_model.joblib. This is your trained model.
+After training completes, a file named **`traffic_model.joblib`** will be created in your project folder.
+This is your trained model.
 
-*3. Make a Prediction*
-Once the model is trained, you can use this script to test it on a single, specific row from your dataset.
+---
 
-In your terminal, run the command:
-bash
+### 3. Make a Prediction
+
+Once the model is trained, you can test it on a single row of your dataset.
+
+Run the prediction script:
+
+```bash
 python predict.py
+```
 
-This will load your trained model and show you a comparison of the actual traffic light state vs. what the model predicted for that row.
+This will load the trained model and display a comparison between the **actual traffic light state** and the **predicted traffic light state**.
