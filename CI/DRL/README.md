@@ -45,11 +45,39 @@ This project is organized into a modular structure, which is a best practice in 
 
 ---
 
-## ⚙️ How to Run
+## ⚙ How to Run
 
 Follow these steps to get the project up and running on your machine.
 
-**1. Install Dependencies**:
-First, you need to install all the necessary Python libraries. Open your terminal or command prompt and run the following command:
-```bash
-pip install pandas scikit-learn stable-baselines3 gym torch
+*1. Install Dependencies*
+First, you need to install all the necessary Python libraries. It's recommended to create a requirements.txt file with the content below and then run pip install -r requirements.txt.
+
+*Content for requirements.txt:*
+
+pandas
+scikit-learn
+joblib
+
+
+Command to install:
+bash
+pip install pandas scikit-learn joblib
+
+
+*2. Train the AI Model*
+This step runs the main training script. It will train the Random Forest model on 80% of your data and save the result.
+
+In your terminal, run the following command:
+bash
+python train.py
+
+After this process is complete, you will see a new file in your folder named traffic_model.joblib. This is your trained model.
+
+*3. Make a Prediction*
+Once the model is trained, you can use this script to test it on a single, specific row from your dataset.
+
+In your terminal, run the command:
+bash
+python predict.py
+
+This will load your trained model and show you a comparison of the actual traffic light state vs. what the model predicted for that row.
