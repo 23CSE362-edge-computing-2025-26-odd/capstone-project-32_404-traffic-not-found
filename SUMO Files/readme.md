@@ -18,3 +18,16 @@ The project compares **fixed-time control**, **hybrid ANN + PPO control**.
 
 ---
 
+# Running the project
+
+-Fixed-Time Control (baseline):
+   python control_ftc.py 
+
+
+-Hybrid ANN + PPO Control:
+   python control_hybrid_with_ann.py --cfg osm.sumocfg --gui --ann traffic_ann_best.pt --yellow 30 --threshold 0.8 --steps 100
+
+
+-Train PPO Agent:
+   python control_osm_train_ppo.py
+
